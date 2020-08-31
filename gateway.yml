@@ -2,6 +2,14 @@ server:
   port: ${PORT:7081}
 spring:
   cloud:
-    loadbalancer:
-      retry:
-        enabled: false
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7082/eureka/
