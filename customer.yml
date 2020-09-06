@@ -1,2 +1,6 @@
 server:
   port: ${PORT:9710}
+nucleus:
+  core:
+    swagger:
+      enabled: true
