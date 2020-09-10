@@ -7,9 +7,14 @@ spring:
         locator:
           enabled: true
           lowerCaseServiceId: true
+    loadbalancer:
+      retry:
+        enabled: false
 eureka:
   instance:
     preferIpAddress: true
   client:
     serviceUrl:
       defaultZone: http://localhost:7082/eureka/
+ribbon:
+  ReadTimeout: 15000
