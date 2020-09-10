@@ -17,4 +17,4 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:7082/eureka/
 swagger:
-  exclude: gateway, configuration-server
+  exclude: gateway,configuration-server
