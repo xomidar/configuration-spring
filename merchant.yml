@@ -9,7 +9,7 @@ spring:
     properties:
       org:
       hibernate:
-        default_schema: unipetdb
+        default_schema: unipet_merchant
         ddl-auto:
         hbm2ddl:
           auto:
