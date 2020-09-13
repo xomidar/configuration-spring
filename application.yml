@@ -1,8 +1,1 @@
-server:
-  port: ${PORT:8080}
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:7082/eureka/
+

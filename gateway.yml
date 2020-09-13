@@ -1,5 +1,3 @@
-server:
-  port: ${PORT:7081}
 spring:
   cloud:
     gateway:
@@ -10,11 +8,19 @@ spring:
     loadbalancer:
       retry:
         enabled: false
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:7082/eureka/
+  main:
+    allow-bean-definition-overriding: true
 swagger:
   exclude: gateway,configuration-server
+---
+server:
+  port: ${PORT:9935}
+spring:
+  profiles: dev
+---
+spring:
+  profiles: stage
+---
+spring:
+  profiles: prod
+---
