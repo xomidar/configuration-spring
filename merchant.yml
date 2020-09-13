@@ -9,12 +9,13 @@ spring:
     properties:
       org:
       hibernate:
-        default_schema: unipet_merchant
+        default_schema: merchant
         ddl-auto: update
         hbm2ddl:
           auto:
         format_sql: true
         naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
     generate-ddl: true
 ---
 spring:
