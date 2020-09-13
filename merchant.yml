@@ -1,0 +1,40 @@
+server:
+  port: ${PORT:9935}
+spring:
+  datasource:
+    continue-on-error: true
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    properties:
+      org:
+      hibernate:
+        default_schema: unipetdb
+        ddl-auto:
+        hbm2ddl:
+          auto:
+        format_sql: true
+        naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    generate-ddl: true
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:sqlserver://unipetdbserver.database.windows.net:1433;databaseName=unipetdb
+    username: bsunipet
+    password: BS@Dhaka
+---
+spring:
+  profiles: stage
+  datasource:
+    url: jdbc:sqlserver://unipetdbserver.database.windows.net:1433;databaseName=unipetdb
+    username: bsunipet
+    password: BS@Dhaka
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:sqlserver://unipetdbserver.database.windows.net:1433;databaseName=unipetdb
+    username: bsunipet
+    password: BS@Dhaka
+---
