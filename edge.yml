@@ -3,6 +3,8 @@ spring:
     loadbalancer:
       retry:
         enabled: false
+swagger:
+  exclude: gateway,configuration-server
 ---
 server:
   port: ${PORT:7081}
