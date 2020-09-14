@@ -4,7 +4,7 @@ spring:
       retry:
         enabled: false
 swagger:
-  exclude: gateway,configuration-server
+  exclude: gateway,configuration-server,edge
 ---
 server:
   port: ${PORT:7081}
