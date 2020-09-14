@@ -14,7 +14,7 @@ swagger:
   exclude: gateway,configuration-server
 ---
 server:
-  port: ${PORT:7081}
+  port: ${PORT:7080}
 spring:
   profiles: dev
 ---

@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: false
+---
+server:
+  port: ${PORT:7081}
+spring:
+  profiles: dev
+---
+spring:
+  profiles: stage
+---
+spring:
+  profiles: prod
+---
