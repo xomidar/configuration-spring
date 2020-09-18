@@ -11,7 +11,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
 swagger:
-  exclude: gateway,configuration-server
+  exclude: gateway,configuration-server,edge
 ---
 server:
   port: ${PORT:7080}
