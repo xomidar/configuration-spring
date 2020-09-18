@@ -16,4 +16,4 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:7082/eureka/
+      defaultZone: ${DISCOVERY_SERVER_URI:http://localhost:7082/eureka/}
